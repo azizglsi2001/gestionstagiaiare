@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel ="stylesheet" href="gerer-filieres.component.css">
+    <title>Filiere page</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Interface Filière</h2>
+
+
+        <div class="form-group">
+          <label for="info">Informatique :</label>
+          <input type="radio" id="info" name="informatique" class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="stat">Statistiques :</label>
+          <input type="radio" id="stat" name="statistiques" class="form-control" >
+        </div>
+          <div class="form-group">
+            <label for="agr">Agriculture :</label>
+            <input type="radio" id="agr" name="agriculture" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label for="chm">Chimie :</label>
+            <input type="radio" id="chm" name="chimie" class="form-control" >
+          </div>
+
+          <div class="form-group">
+            <label for="mec">Mecanique :</label>
+            <input type="radio" id="mec" name="mecanique" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label for="elec">Electrique :</label>
+            <input type="radio" id="elec" name="electrique" class="form-control" >
+          </div>
+
+
+        <ul class="list-group">
+            <li *ngFor="let filiere of filieres" class="list-group-item">
+                <button (click)="consulterFiliere(filiere)" class="btn btn-info btn-sm">Consulter</button>
+                <button (click)="modifierFiliere(filiere)" class="btn btn-primary btn-sm">Modifier</button>
+                <button (click)="supprimerFiliere(filiere)" class="btn btn-danger btn-sm">Supprimer</button>
+                <button (click)="annuler()" class="btn btn-secondary btn-sm">Annuler</button>
+            </li>
+        </ul>
+
+        <form (ngSubmit)="ajouterFiliere()">
+            <div class="input-group mb-3">
+                <input type="text" [(ngModel)]="nouvelleFiliere" class="form-control" placeholder="Nom de la filière" required>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-success">Ajouter</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

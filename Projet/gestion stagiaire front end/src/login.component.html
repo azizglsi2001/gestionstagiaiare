@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My app</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="global_styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <img src="C:\Users\AZIZ\Downloads\Man Landing Interview Thanks to Hilarious Resume Has Internet in Stitches.jpeg" alt="" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6">
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="fil">Filiere :</label>
+                    <select id="fil" name="filiere" [(ngModel)]="filiere" class="form-control" required>
+                        <option value="informatique">Informatique</option>
+                        <option value="statistiques">Statistiques</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="electrique">Electrique</option>
+                        <option value="chimie">Chimie</option>
+                        <option value="mecanique">Mecanique</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stag">Stagiaire :</label>
+                    <input type="text" id="stag" name="stagiaire" [(ngModel)]="stagiaire" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="utl">Utilisateur :</label>
+                    <input type="text" id="utl" name="utilisateur" [(ngModel)]="utilisateur" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+  
+    
